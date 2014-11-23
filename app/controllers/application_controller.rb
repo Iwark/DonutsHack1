@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless user_signed_in?
-      redirect_to :root
+      redirect_to user_omniauth_authorize_path(:twitter)
     end
   end
 end
