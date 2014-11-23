@@ -32,4 +32,10 @@ class Room < ActiveRecord::Base
     where(status: Room.statuses[status])
   }
 
+  before_create :set_invitation_code
+
+  def set_invitation_code
+    self.invitation_code = SecureRandom.uuid[0..7]
+  end
+
 end

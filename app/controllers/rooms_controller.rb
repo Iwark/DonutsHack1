@@ -4,6 +4,9 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
   def show
+    if params[:code] && current_user != @room.user && !@room.users.include?(current_user) && params[:code] == @room.invitation_code
+      RoomUser.create(user_id: current_user.id, room_id: @room.id, status: :accepted)
+    end
   end
 
   def index

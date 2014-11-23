@@ -2,4 +2,10 @@
 | の部屋
 
 h3 参加するユーザー
-= render @room.users
+.room-users
+  = render @room.users
+
+- if @room.user == current_user || @room.users.include?(current_user)
+  h3 招待用URL
+  .invitation-url
+    = room_url(@room, code: @room.invitation_code)

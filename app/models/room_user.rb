@@ -19,7 +19,7 @@ class RoomUser < ActiveRecord::Base
   #   accepted(OK)
   #   refused(NG)
   #   canceled(招待者がキャンセルした場合)
-  enum status: { temp: 10, accepted: 20, refused: 30, canceld:40 }
-  validates :status, inclusion: { in: %w(temp open full closed deleted) }
+  enum status: { temp: 10, accepted: 20, refused: 30, canceled:40 }
+  validates :status, inclusion: { in: %w(temp accepted refused canceled) }
 
 end
