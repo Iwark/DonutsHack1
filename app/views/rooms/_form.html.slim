@@ -1,0 +1,20 @@
+.room-form
+  = render 'errors/form_error', obj: @room
+  = form_for @room, html: { class: 'form-horizontal post-form' } do |f|
+    .form-group.mt10
+      .col-sm-3
+        = f.label :title, class: 'control-label'
+      .col-sm-9
+        = f.text_field :title, class: 'form-control'
+    .form-group.mt10
+      .col-sm-3
+        = f.label :place, class: 'control-label'
+      .col-sm-9
+        = f.text_field :place, class: 'form-control'
+    .form-group.mt10
+      .col-sm-3
+        = f.label :hold_at, class: 'control-label'
+      .col-sm-9
+        = f.datetime_select :hold_at, class: 'form-control'
+    .form-group.mt20.center
+      = f.submit 'OK', class: 'btn btn-primary'

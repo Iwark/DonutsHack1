@@ -1,0 +1,6 @@
+.form-error
+  - if obj.errors.any?
+    h2= t('errors.title')
+    ul
+      - obj.errors.full_messages.each do |msg|
+        li= msg

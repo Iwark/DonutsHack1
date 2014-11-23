@@ -1,0 +1,12 @@
+// ellipsis.scss
+// Author:: Kohei Iwasaki
+// Date:: 2014-08-15
+// 一行の文字列を「...」で省略するmixin
+
+@mixin ellipsis{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}

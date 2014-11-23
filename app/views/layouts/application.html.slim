@@ -1,6 +1,7 @@
 doctype html
 html
   head
+    = render 'layouts/meta_tags'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -14,4 +15,6 @@ html
           p.notice= notice
           p.alert= alert
           = yield
+          .new-room-path= link_to '部屋の新規作成', new_room_path, class: 'btn'
+          .new-user-path= link_to 'ユーザーの新規作成', new_user_path, class: 'btn'
         = render 'layouts/footer'

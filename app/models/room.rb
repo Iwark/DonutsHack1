@@ -9,6 +9,7 @@
 #  invitation_code :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
+#  hold_at         :datetime
 #
 
 class Room < ActiveRecord::Base
@@ -23,5 +24,10 @@ class Room < ActiveRecord::Base
   #   deleted(削除)
   enum status: { temp: 10, open: 20, full: 30, closed:40, deleted: 50 }
   validates :status, inclusion: { in: %w(temp open full closed deleted) }
+
+  # ステータスで絞り込み
+  scope :by_status, -> status {
+    where(status: Room.statuses[status])
+  }
 
 end

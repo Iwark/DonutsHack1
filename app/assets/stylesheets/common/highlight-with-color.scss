@@ -1,0 +1,8 @@
+// highlight-with-color.scss
+// Author:: Kohei Iwasaki
+// Date:: 2014-08-15
+// タップした時のハイライト色を指定するmixin
+
+@mixin highlight-with-color($color){
+  -webkit-tap-highlight-color:$color;
+}

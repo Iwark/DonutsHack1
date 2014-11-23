@@ -1,0 +1,45 @@
+// app-header.scss
+// Author:: Kohei Iwasaki
+// Date:: 2014-08-15
+// ヘッダに適用するcss
+
+$header-height: 42px;
+$logo-height: 35px;
+$header-color: rgba(#92e1c4,0.90);
+$xmas-header-color: rgba(#B72A20, 0.90);
+
+.app-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  background-color: $xmas-header-color !important;
+  z-index: 9999;
+  .navbar-header{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .logo{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      a{
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: $header-height;
+        padding-top: ($header-height - $logo-height) / 2;
+        line-height: $header-height;
+        color: white;
+        img{
+          display: block;
+          margin: 0 auto;
+          height: $logo-height;
+        }
+      }
+    }
+  }
+}

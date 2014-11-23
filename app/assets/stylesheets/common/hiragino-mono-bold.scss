@@ -1,0 +1,9 @@
+// hiragino-mono-bold.scss
+// Author:: Kohei Iwasaki
+// Date:: 2014-08-15
+// monospace boldのフォントのmixin
+
+@mixin hiragino-mono-bold{
+  font-family: Hiragino Kaku Gothic ProN monospace;
+  font-weight: bold;
+}

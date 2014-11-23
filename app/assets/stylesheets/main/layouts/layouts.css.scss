@@ -2,6 +2,8 @@
 // Author:: Kohei Iwasaki
 // Date:: 2014-11-23
 // アプリ全体に適用するcss
+ 
+$max-main-width: 640px;
 
 *{
   // borderとpaddingをボックス内に含めるようにする
@@ -15,6 +17,87 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.wrapper{
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  z-index: 1;
+  background: white;
+}
+
+.main-container{
+  position: absolute;
+  padding-top: $header-height;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  z-index:1;
+  background: transparent;
+  .main-body{
+    position: relative;
+    max-width: $max-main-width;
+    min-height: 100%;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    overflow-x: hidden;
+    background-color: white;
+  }
+}
+
+footer {
+  position:absolute;
+  margin: 0 -300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  clear: both;
+  text-align: center;
+  color: #4b4b4b;
+
+  .go-to-page-top{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #6b6b6b;
+    border-top: solid 1px #eeeeee;
+    border-bottom: solid 1px #eeeeee;
+    cursor: pointer;
+  }
+  .footer-links {
+    position: absolute;
+    bottom: 24px;
+    height: 26px;
+    line-height: 26px;
+    width: 100%;
+    font-size: 11px;
+    a {
+      color: #4b4b4b;
+      text-decoration: none;
+    }
+  }
+  .copyright {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 24px;
+    padding-top: 6px;
+    background-color: $xmas-header-color;
+    color: white;
+    font-size: 10px;
+    font-family: Hiragino Kaku Gothic ProN;
+    span{
+      margin: 0 auto;
+      color: white;
+    }
+  }
 }
 
 div, span, td, th, p, h1, h2, h3, h4{

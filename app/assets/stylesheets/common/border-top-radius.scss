@@ -1,0 +1,15 @@
+// border-top-radius.scss
+// Author:: Kohei Iwasaki
+// Date:: 2014-08-15
+// ボックス上部の角を丸めるmixin
+
+@mixin border-top-radius($radius){
+	border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+
+	-webkit-border-top-left-radius: $radius;
+	-webkit-border-top-right-radius: $radius; 
+
+	-moz-border-radius-topleft: $radius;
+	-moz-border-radius-topright: $radius;
+}

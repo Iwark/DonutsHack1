@@ -1,0 +1,9 @@
+ja:
+  layouts:
+    header:
+      title: DonutsHack1
+    footer:
+      company: 運営会社
+      copyright: 'Copyright©Donuts,inc.All rights Reserved.'
+      inquiry: お問い合わせ 
+      privacy: プライバシー 

@@ -9,6 +9,7 @@
 #  invitation_code :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
+#  hold_at         :datetime
 #
 
 require 'rails_helper'

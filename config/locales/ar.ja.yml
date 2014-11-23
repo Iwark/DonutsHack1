@@ -19,4 +19,5 @@ ja:
         title: 部屋名
         status: ステータス
         place: 開催場所
+        hold_at: 開催日
         intorduction_code: 招待コード

@@ -1,0 +1,5 @@
+.room
+  a href= room_path(room)
+    .title= room.title
+    .place= room.place
+    .hold_at= room.hold_at.strftime('%m/%d %H:%M') if room.hold_at
