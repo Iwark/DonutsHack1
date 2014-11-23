@@ -23,6 +23,7 @@ gem "twitter"
 gem 'remotipart'
 gem 'carrierwave'
 gem 'rmagick', require: false
+gem 'fog'
 
 # ログイン
 gem 'devise'
