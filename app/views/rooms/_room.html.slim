@@ -1,5 +1,14 @@
 .room
   a href= room_path(room)
-    .title= room.title
-    .place= room.place
-    .hold_at= room.hold_at.strftime('%m/%d %H:%M') if room.hold_at
+    .info
+      .image= image_tag room.image.url if room.image?
+      .desc-bg
+      .desc
+        .hold_at
+          .month= room.hold_at.strftime('%m月')
+          .date= room.hold_at.strftime('%d')
+        .title = room.title
+    .participants
+      = render 'users/user_icon', user: room.user
+      - room.users.each do |user|
+        = render 'users/user_icon', user: user

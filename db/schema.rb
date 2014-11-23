@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123063158) do
+ActiveRecord::Schema.define(version: 20141123123732) do
 
   create_table "room_users", force: true do |t|
     t.integer  "user_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20141123063158) do
     t.datetime "updated_at"
     t.datetime "hold_at"
     t.integer  "user_id"
+    t.string   "image"
   end
 
   create_table "users", force: true do |t|
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20141123063158) do
     t.string   "last_sign_in_ip"
     t.string   "provider",            default: "", null: false
     t.string   "uid",                 default: "", null: false
+    t.string   "image"
   end
 
   add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree

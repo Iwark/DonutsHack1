@@ -16,6 +16,7 @@
 #  last_sign_in_ip     :string(255)
 #  provider            :string(255)      default(""), not null
 #  uid                 :string(255)      default(""), not null
+#  image               :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -26,6 +27,8 @@ class User < ActiveRecord::Base
 
   has_many :room_users
   has_many :rooms, through: :room_users
+
+  mount_uploader :image, UserImageUploader
 
   # 性別 :
   #   temp(申請中)

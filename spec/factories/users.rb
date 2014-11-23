@@ -16,6 +16,7 @@
 #  last_sign_in_ip     :string(255)
 #  provider            :string(255)      default(""), not null
 #  uid                 :string(255)      default(""), not null
+#  image               :string(255)
 #
 
 FactoryGirl.define do

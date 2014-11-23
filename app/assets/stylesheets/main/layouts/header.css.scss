@@ -32,8 +32,10 @@ $xmas-header-color: rgba(#B72A20, 0.90);
         width: 200px;
         height: $header-height;
         padding-top: ($header-height - $logo-height) / 2;
-        line-height: $header-height;
+        line-height: $header-height - 8;
         color: white;
+        text-decoration: none;
+        font-size: 24px;
         img{
           display: block;
           margin: 0 auto;

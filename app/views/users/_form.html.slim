@@ -16,5 +16,17 @@
         = f.label :introduction, class: 'control-label'
       .col-sm-9
         = f.text_area :introduction, class: 'form-control'
+    .form-group.mt10
+      .col-sm-3
+        = f.label :image, class: 'control-label'
+      .col-sm-9
+        .image
+          .file
+            .filetext
+              = f.file_field :image, class: 'form-control file-field', accept:"image/*"
+    .mt10
+      - if @user.image?
+        .active-image
+          = image_tag(@user.image_url)
     .form-group.mt20.center
       = f.submit 'OK', class: 'btn btn-primary'

@@ -23,7 +23,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :name
-    devise_parameter_sanitizer.for(:account_update) << [:name, :gender, :introduction]
+    devise_parameter_sanitizer.for(:account_update) << [:name, :gender, :introduction, :image, :image_cache]
   end
  
 end

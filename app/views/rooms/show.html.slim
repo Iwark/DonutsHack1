@@ -1,23 +1,21 @@
+.room-show
+  .room-image
+    =image_tag @room.image.url
+  .desc
+    .title= @room.title
+    | 主催者：
+    = @room.user.name
+    p
+      | 時間　：
+      = @room.hold_at.strftime('%m/%d %H:%M') if @room.hold_at
+    p
+      | 場所　：
+      = @room.place
 
-h2 = @room.title
-| 主催者：
-= @room.user.name
-
-- if current_user != @room.user
-  p 参加する or 未定 or 参加しない
-
-p
-  | 時間　：
-  = @room.hold_at.strftime('%m/%d %H:%M') if @room.hold_at
-
-p
-  | 場所　：
-  = @room.place
-
-| 参加者：
-= render @room.users
-
-- if @room.user == current_user || @room.users.include?(current_user)
-  h3 招待用URL
-  .invitation-url
-    = room_url(@room, code: @room.invitation_code)
+    = render @room.users
+    - if @room.user == current_user || @room.users.include?(current_user)
+      h3 招待用URL
+      .invitation-url
+        = room_url(@room, code: @room.invitation_code)
+    / - if current_user != @room.user
+    /   p 参加する or 未定 or 参加しない

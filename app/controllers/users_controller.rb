@@ -25,7 +25,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    logger.info @user.name
+    logger.info user_params
+    if @user.update_attributes(user_params)
       redirect_to @user
     else
       render :edit
@@ -44,7 +46,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-      :name, :gender, :introduction
+      :name, :gender, :introduction, :image, :image_cache
     )
   end
 

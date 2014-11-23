@@ -11,6 +11,7 @@
 #  updated_at      :datetime
 #  hold_at         :datetime
 #  user_id         :integer
+#  image           :string(255)
 #
 
 FactoryGirl.define do

@@ -11,12 +11,15 @@
 #  updated_at      :datetime
 #  hold_at         :datetime
 #  user_id         :integer
+#  image           :string(255)
 #
 
 class Room < ActiveRecord::Base
   has_many :room_users
   has_many :users, through: :room_users
   belongs_to :user
+
+  mount_uploader :image, RoomImageUploader
 
   # ステータス:
   #   temp(作成済み)
