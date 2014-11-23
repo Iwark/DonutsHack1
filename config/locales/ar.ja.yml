@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー 
+      room: 部屋
+
+# モデルの属性名
+ja:
+  attributes:
+    created_at: 作成日
+    updated_at: 更新日
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+        gender: 性別
+        introduction: 自己紹介
+      room:
+        title: 部屋名
+        status: ステータス
+        place: 開催場所
+        intorduction_code: 招待コード
