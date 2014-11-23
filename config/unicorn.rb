@@ -1,6 +1,6 @@
 # require 'action_dispatch/middleware/session/dalli_store'
 
-listen '/tmp/unicorn.cclt.sock', :backlog => 64
+listen '/tmp/unicorn.donuts_hack1.sock', :backlog => 64
 pid "tmp/pids/unicorn.pid"
 
 stderr_path File.expand_path('unicorn.log', File.dirname(__FILE__) + '/../log')
