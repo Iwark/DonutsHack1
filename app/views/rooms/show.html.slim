@@ -1,10 +1,23 @@
-= @room.title
-| の部屋
 
-h3 参加するユーザー
-.room-users
-  = render @room.users
-  
+h2 = @room.title
+| 主催者：
+= current_user.name
+
+- if current_user.id != @room.user_id
+  p 参加する or 未定 or 参加しない
+
+p
+  | 時間　：
+  = @room.hold_at.strftime('%m/%d %H:%M') if @room.hold_at
+
+p
+  | 場所　：
+  = @room.place
+
+| 参加者：
+= current_user.name
+= render :partial => "room_user", :collections => @room_users
+
 - if @room.user == current_user || @room.users.include?(current_user)
   h3 招待用URL
   .invitation-url
