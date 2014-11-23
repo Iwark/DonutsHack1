@@ -5,7 +5,11 @@ class RoomsController < ApplicationController
 
   def show
     if params[:code] && current_user != @room.user && !@room.users.include?(current_user) && params[:code] == @room.invitation_code
-      RoomUser.create(user_id: current_user.id, room_id: @room.id, status: :accepted)
+      if user_signed_in?
+        RoomUser.create(user_id: current_user.id, room_id: @room.id, status: :accepted)
+      else
+        redirect_to user_omniauth_authorize_path(:twitter)
+      end
     end
   end
 
