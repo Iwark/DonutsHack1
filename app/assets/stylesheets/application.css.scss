@@ -1,0 +1,13 @@
+// application.css.scss
+// Author:: Kohei Iwasaki
+// Date:: 2014-11-23
+// アプリ全体に適用するcss
+
+@import "bootstrap-custom.scss";
+@import "jquery-ui-custom.scss";
+
+@import 'nprogress';
+@import 'nprogress-bootstrap';
+
+@import "common/**/*";
+@import "main/**/*";
