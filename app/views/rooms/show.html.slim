@@ -1,9 +1,9 @@
 
 h2 = @room.title
 | 主催者：
-= current_user.name
+= @room.user.name
 
-- if current_user.id != @room.user_id
+- if current_user != @room.user
   p 参加する or 未定 or 参加しない
 
 p
@@ -15,8 +15,7 @@ p
   = @room.place
 
 | 参加者：
-= current_user.name
-= render :partial => "room_user", :collections => @room_users
+= render @room.users
 
 - if @room.user == current_user || @room.users.include?(current_user)
   h3 招待用URL

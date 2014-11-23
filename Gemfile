@@ -19,6 +19,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'ransack'
 gem "twitter"
 
+# 画像upload
+gem 'remotipart'
+gem 'carrierwave'
+gem 'rmagick', require: false
+
 # ログイン
 gem 'devise'
 gem 'omniauth'

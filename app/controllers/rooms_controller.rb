@@ -11,7 +11,6 @@ class RoomsController < ApplicationController
         redirect_to user_omniauth_authorize_path(:twitter)
       end
     end
-    @room_users = RoomUser.where(room_id: params[:id])
   end
 
   def index
