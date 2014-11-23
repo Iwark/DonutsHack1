@@ -1,0 +1,61 @@
+.social-buttons{
+  position: relative;
+  width: 98%;
+  height: 40px;
+  margin: 0 auto;
+}
+.social-button{
+  position:absolute;
+  top: 0;
+  width: 48%;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  .title{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 0px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+  }
+}
+.facebook-login{
+  @extend .social-button;
+  left: 0;
+  background-color: #3b5998;
+  .facebook-icon{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+  }
+}
+.twitter-login{
+  @extend .social-button;
+  right: 0;
+  background-color: #2ca7e0;
+  .twitter-icon{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+  }
+}
+.social-login{
+  height: 20px;
+  margin: 20px auto;
+  hr{
+    margin-top: 10px;
+    float: left;
+    width: 45%;
+  }
+  div{
+    float: left;
+    width: 10%;
+    text-align: center;
+    line-height: 20px;
+  }
+}

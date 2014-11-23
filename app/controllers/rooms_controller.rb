@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
 
   before_action :set_room, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
   def show
   end
@@ -16,6 +17,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     @room.status = :open
+    @room.user = current_user
     if @room.save
       redirect_to @room
     else
