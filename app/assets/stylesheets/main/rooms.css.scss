@@ -1,6 +1,7 @@
 .rooms-index{
   .room{
     margin-bottom: 5px;
+    background-color: #eee;
     &:active{
       opacity: 0.8;
     }
@@ -102,6 +103,9 @@
         }
       }
     }
+  }
+  .info{
+    padding: 0 10px;
   }
 }
 
