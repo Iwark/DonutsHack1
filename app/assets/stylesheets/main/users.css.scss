@@ -23,6 +23,9 @@
     line-height: 60px;
     @include ellipsis;
   }
+  &:active{
+    background-color: rgba(#eee, 0.8);
+  }
 }
 
 .man{
