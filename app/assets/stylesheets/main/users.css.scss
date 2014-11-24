@@ -16,18 +16,20 @@
   .name{
     position: absolute;
     top: 0;
-    left: 70px;
-    right: 10px;
+    left: 60px;
+    right: 0px;
+    padding: 0 10px;
     height: 60px;
     line-height: 60px;
     @include ellipsis;
   }
-  .man{
-    color: blue;
-  }
-  .woman{
-    color: red;
-  }
+}
+
+.man{
+  color: blue;
+}
+.woman{
+  color: red;
 }
 
 .user-show{

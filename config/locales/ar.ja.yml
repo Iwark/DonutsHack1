@@ -14,6 +14,9 @@ ja:
       user:
         name: 名前
         gender: 性別
+        genders:
+          man: 男性
+          woman: 女性
         introduction: 自己紹介
       room:
         title: 部屋名

@@ -10,7 +10,11 @@
       .col-sm-3
         = f.label :gender, class: 'control-label'
       .col-sm-9
-        = f.text_field :gender, class: 'form-control'
+        .btn-group.btn-toggle data-toggle="buttons"
+          - User.genders.each do |u|
+            label.btn.btn-default
+              = f.radio_button :gender, u[0]
+              = t("activerecord.attributes.user.genders.#{u[0]}")
     .form-group.mt10
       .col-sm-3
         = f.label :introduction, class: 'control-label'
