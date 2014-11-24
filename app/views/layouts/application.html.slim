@@ -15,14 +15,4 @@ html
           p.notice= notice
           p.alert= alert
           = yield
-          .new-room-path= link_to '部屋の新規作成', new_room_path, class: 'btn'
-          -unless user_signed_in?
-            .social-buttons
-              .twitter-login
-                a href=user_omniauth_authorize_path(:twitter)
-                  = image_tag("social_buttons/ico_tw01.gif", class: "twitter-icon")
-                  .title
-                    = t('layouts.login_with_twitter')
-          -else
-            = link_to t('layouts.logout'), destroy_user_session_path, method: :delete
         = render 'layouts/footer'

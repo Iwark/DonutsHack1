@@ -2,3 +2,14 @@ nav.app-header
   .navbar-header
     .logo
       = link_to t('layouts.header.title'), :root
+    .dropdown
+      a.dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false"
+        | 三
+        span.caret
+      ul.dropdown-menu.dropdown-menu-right role="menu"
+        -if user_signed_in?
+          li= link_to '部屋の新規作成', new_room_path
+          li= link_to 'マイページ', user_path(current_user)
+          li= link_to t('layouts.logout'), destroy_user_session_path, method: :delete
+        -else
+          li= link_to t('layouts.login_with_twitter'), user_omniauth_authorize_path(:twitter)

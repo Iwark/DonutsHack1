@@ -43,5 +43,20 @@ $xmas-header-color: rgba(#B72A20, 0.90);
         }
       }
     }
+    .dropdown{
+      position: absolute;
+      top: 0;
+      right: 10px;
+      height: $header-height;
+      line-height: $header-height;
+      font-size: 24px;
+      cursor: pointer;
+      a{
+        color: white;
+      }
+      .dropdown-menu a{
+        color: #444;
+      }
+    }
   }
 }

@@ -1,2 +1,7 @@
-= @user.name
-| のプロフィール
+.user-show
+  .image= image_tag @user.image.url
+  .name
+    = @user.name
+    span.edit= link_to '[編集]', edit_user_path(@user) if @user == current_user
+  hr
+  .introduction= @user.introduction

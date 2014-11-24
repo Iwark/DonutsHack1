@@ -1,3 +1,4 @@
 .user
-  .name= user.name
-  .gender= user.gender
+  a href=user_path(user)
+    .image= image_tag user.image.icon.url
+    .name class="#{user.gender}"= user.name

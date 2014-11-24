@@ -27,6 +27,6 @@
     .mt10
       - if @user.image?
         .active-image
-          = image_tag(@user.image_url)
+          = image_tag(@user.image.icon.url)
     .form-group.mt20.center
       = f.submit 'OK', class: 'btn btn-primary'

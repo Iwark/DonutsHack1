@@ -11,8 +11,9 @@
     p
       | 場所　：
       = @room.place
-
-    = render @room.users
+    .participants
+      = render @room.user
+      = render @room.users
     - if @room.user == current_user || @room.users.include?(current_user)
       h3 招待用URL
       .invitation-url
