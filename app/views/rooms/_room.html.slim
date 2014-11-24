@@ -8,8 +8,8 @@
           .month= room.hold_at.strftime('%m月')
           .date= room.hold_at.strftime('%d')
         .title = room.title
-    .participants
-      = render 'users/user_icon', user: room.user
-      - room.users.each do |user|
-        = render 'users/user_icon', user: user
-      .clear
+        .participants
+          = render 'users/user_icon', user: room.user
+          - room.users.each do |user|
+            = render 'users/user_icon', user: user
+          .clear

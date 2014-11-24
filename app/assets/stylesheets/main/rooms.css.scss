@@ -1,5 +1,6 @@
 .rooms-index{
   .room{
+    margin-bottom: 5px;
     &:active{
       opacity: 0.8;
     }
@@ -48,26 +49,34 @@
           position: absolute;
           top: 2px;
           left: 70px;
-          height: 100%;
-          font-size: 24px;
+          right: 10px;
+          height: 32px;
+          font-size: 14px;
+          line-height: 16px;
+          overflow: hidden;
+        }
+        .participants{
+          position: absolute;
+          top: 36px;
+          left: 70px;
+          right: 10px;
+          height: 40px;
+          overflow:hidden;
+          .user-icon{
+            float: left;
+            margin-left: 5px;
+            width: 32px;
+            height: 32px;
+            background-color: rgba(#dedede, 0.5);
+            text-align: center;
+            img{
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
         }
       }
-    }
-    .participants{
-      padding: 5px 0;
-      background-color: #eeffee;
-      .user-icon{
-        float: left;
-        margin-left: 5px;
-        width: 60px;
-        height: 60px;
-        background-color: rgba(#dedede, 0.5);
-        text-align: center;
-        img{
-          max-width: 100%;
-          max-height: 100%;
-        }
-      }
+      
     }
   }
 }
@@ -80,9 +89,11 @@
     }
   }
   .desc{
-    padding: 0 10px;
     .title{
-      font-size: 24px;
+      font-size: 18px;
+      background-color: #eaeaea;
+      padding: 0 10px;
+      margin-bottom: 10px;
       .edit{
         margin-left: 10px;
         font-size: 12px;
